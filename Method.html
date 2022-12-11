@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./php/css/style.css">
+	
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 150hv;
+  background: linear-gradient(#0EBFE9, #ffffff);
+}
+
+.container form{
+  padding:20px;
+  width:700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container form .row .col{
+  flex:1 1 250px;
+}
+
+.container form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .box .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.container form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 15px;
+  background: #c19a6b;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.container form .previous{
+  width: 100%;
+  padding:5px;
+  font-size: 15px;
+  color:#000000;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+.container form .submit-btn:hover{
+  background: #000000;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-gray {
+    color: #e9ecef;
+}
+
+.font-title {
+    font-family: 'Lato', sans-serif;
+}
+.gcash span{
+   margin-top: 10px;
+   margin-bottom: 10px;
+   display: block;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<form action="http://localhost/webdev/connect.php" method="POST">
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">DELIVERY DETAILS</h3>
+
+                <div class="inputBox">
+                    <span>Cash On Deliver :</span>
+                    <input type="text" name="Cash On Deliver" placeholder="customers name">
+                </div>
+                <div class="inputBox">
+                    <span>Number :</span>
+                    <input type="text" name="Number" placeholder="09xxxxxxxxx">
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" name="address" placeholder="room - street - locality">
+                </div>
+               					<div class="inputBox">
+					<span>Choose your desire Pick-Up Schedule :</span>
+						<form action="/action_page.php">
+						  <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+
+    </div>
+            
+            <div class="col">
+
+                <h3 class="title"> PAYMENT DETAILS </h3>
+
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="gcash.png" alt="">
+					 <img src="pay.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" name="namecard" placeholder="Mr. Harry Styles">
+                </div>
+                <div class="inputBox">
+                    <span>card number :</span>
+                    <input type="number" name="creditnumber" placeholder="1111-2222-3333">
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" name="month" placeholder="Month">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" name="year" placeholder="2025">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" name="cvv" placeholder="1234">
+                    </div>
+					<div class="gcash">
+					<span>CHOOSE YOUR PAYMENT:</span>
+					<center><a href="https://m.gcash.com/gcash-login-web/index.html#/">
+	                <img src="gcash.png" width="90" height="20">
+	              </div>
+				
+				  <div class="paypal">
+				   <div id="paypal-payment-button">
+				   <script src="https://www.paypal.com/sdk/js?client-id=ATqJoT8uledW83BN2RvdA4o9tptMnGw4EUVlV1na6YHhKgqXEHcJXE8t0EZLGsDr4mybfMJ5nXxL10vQ&disable-funding=credit,card"></script>
+                    <script src="index.js"></script>
+					</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+ </div>
+</div>
+</div>    
+
+</body>
+</html>
